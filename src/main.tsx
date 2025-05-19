@@ -11,3 +11,12 @@ createRoot(document.getElementById("root")!).render(
     </Routes>
   </Router>
 );
+
+
+{
+
+  // Todo
+
+  // Fix why choose us image size
+  // Alert
+}

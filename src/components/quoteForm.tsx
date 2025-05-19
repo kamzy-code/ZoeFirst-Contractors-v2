@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import sendEmail from "../service/emailservice";
+import Swal from 'sweetalert2';
 
 interface QuoteFormProps {
   toggleForm: () => void;
@@ -23,7 +24,12 @@ function QuoteForm({ toggleForm }: QuoteFormProps) {
       sendEmail(formRef.current, templateID).then(
         (result) => {
           console.log("Success:", result.text);
-          alert("Message sent!");
+
+          Swal.fire({
+            icon: 'success',
+            title: 'Submitted!',
+            text: 'Quote request submitted successfully.',  
+          })
           
           // Reset form fields
           setName("");
@@ -35,7 +41,13 @@ function QuoteForm({ toggleForm }: QuoteFormProps) {
         },
         (error) => {
           console.log("Error:", error.text);
-          alert("Failed to send message!");
+           Swal.fire({
+            icon: 'error',
+            title: 'Oops...Erorr!',
+            text: 'Error submitting request...try again!',  
+          })
+
+
         }
       );
     } else {

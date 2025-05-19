@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import sendEmail from "../service/emailservice";
+import Swal from "sweetalert2";
 
 function ContactForm() {
   const contactFormRef = useRef<HTMLFormElement>(null);
@@ -19,7 +20,11 @@ function ContactForm() {
       sendEmail(contactFormRef.current, templateID).then(
         (result) => {
           console.log("Success:", result.text);
-          alert("Message sent!");
+          Swal.fire({
+            icon: "success",
+            title: "Submitted!",
+            text: "Form submitted successfully.",
+          });
 
           // Reset form fields
           setName("");
@@ -29,7 +34,11 @@ function ContactForm() {
         },
         (error) => {
           console.log("Error:", error.text);
-          alert("Failed to send message!");
+          Swal.fire({
+            icon: "error",
+            title: "Oops...Erorr!",
+            text: "Error submitting form...try again!",
+          });
         }
       );
     } else {
