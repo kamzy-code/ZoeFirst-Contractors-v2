@@ -1,0 +1,180 @@
+.expect-container {
+  height: 24rem;
+  background: rgba(139, 107, 0, 1);
+  position: relative;
+}
+
+.expect-background-image {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url("img/big/expect_bg.png") center/cover no-repeat;
+  opacity: 0.5;
+}
+
+.expect-overlay-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: linear-gradient(rgba(24, 24, 24, 0.3), rgba(24, 24, 24, 0.3)),
+    url("/img/big/expect_overlay.png") center/cover no-repeat;
+}
+
+.expect-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.expect-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.expect_header-stroke {
+  height: 1.5px;
+  width: 6rem;
+  background-color: white;
+}
+
+.expect-content h2 {
+  color: white;
+  font-weight: 300;
+}
+
+.expect-header h2 {
+  color: white;
+  font-weight: 400;
+}
+
+.expect-item-list {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+
+.expectItem {
+  width: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.expect-item-image-container {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.expect-item-image-container img {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width: 70%;
+}
+
+.expect-item-text-container {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.expect-item-text-container h2 {
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 400;
+}
+.submit-btn-container button{
+  width: 50%;
+}
+
+.submit-btn-container button:hover {
+  border: 1px solid #d5af30;
+  background-color: transparent;
+  color: #d5af30;
+}
+
+.submit-btn-container button:active {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+}
+
+
+@media (max-width: 768px) {
+  .expect-container {
+    height: 20rem;
+  }
+  .expect_header-stroke {
+    width: 5rem;
+  }
+
+  .expect-item-list {
+    width: 80%;
+    margin-top: 30px;
+  }
+
+  .expect-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .expectItem {
+    width: 3rem;
+  }
+
+  .expect-item-text-container h2 {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .expect-container {
+    height: 14rem;
+  }
+
+  .expect-header {
+    gap: 20px;
+  }
+  .expect_header-stroke {
+    width: 3rem;
+  }
+
+
+  .expect-content h2 {
+    font-size: 1rem;
+  }
+
+  .expect-item-list {
+    width: 80%;
+    margin-top: 30px;
+  }
+
+  .expectItem {
+    width: 2rem;
+  }
+
+  .expect-item-text-container h2 {
+    font-size: 0.6rem;
+  }
+}

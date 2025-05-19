@@ -1,0 +1,382 @@
+.hero {
+  background: linear-gradient(rgba(24, 24, 24, 0.8), rgba(24, 24, 24, 0.8)),
+    url("/img/big/landing-bg.png") center/cover no-repeat;
+  height: 100vh;
+  width: 100%;
+  color: white;
+  position: relative;
+}
+.hero-backdrop-clicker {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.Hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  z-index: 100;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  z-index: 100;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 70px;
+ z-index: 100;
+}
+
+.navItems {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+  z-index: 1000;
+}
+
+.navItem {
+  color: white;
+  text-decoration: none;
+  transition: ease-in-out 0.5s;
+   z-index: 1000;
+}
+
+.navItem:hover {
+  text-decoration: underline;
+  letter-spacing: 0.25rem;
+}
+
+.navLogo {
+  width: 70px;
+   z-index: 100;
+}
+
+.hero-content {
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  z-index: 5;
+}
+
+.hero-content h1 {
+  font-size: 4.5rem;
+  letter-spacing: 5px;
+  font-weight: 700;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  letter-spacing: 5px;
+}
+
+button {
+  color: black;
+  background-color: #d5af30;
+  padding: 10px 20px;
+  border: none;
+  font-size: 0.7rem;
+}
+
+.QuoteBtn {
+  padding: 10px 100px;
+  font-size: 1rem;
+}
+
+.hero-quote-btn-container {
+  margin-top: 80px;
+}
+
+.QuoteBtn:hover {
+  border: 1px solid #d5af30;
+  background-color: transparent;
+  color: #d5af30;
+}
+
+.QuoteBtn:active {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+}
+
+.Quote_Form-Backdrop {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: ease-in-out 0.5s;
+}
+.backdrop-clicker {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.quote-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  position: absolute;
+  gap: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  width: 40%;
+  border: 1.5px solid white;
+  border-radius: 10px;
+  z-index: 10;
+  animation: formBounce 0.5s ease-in-out;
+}
+
+.quote-form-container h1 {
+  font-size: 2rem;
+  letter-spacing: 3px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-weight: 700;
+}
+
+.quote-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.quote-form input {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: transparent;
+  color: white;
+  border: 1.5px solid white;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.submit-btn-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.quote-form-container button {
+  width: 50%;
+}
+
+.quote-form-container button:hover {
+  border: 1px solid #d5af30;
+  background-color: transparent;
+  color: #d5af30;
+}
+
+.quote-form-container button:active {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+}
+
+.quote-form-wrapper {
+  position: absolute;
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 20px 50px;
+  }
+
+  .navItems {
+    gap: 40px;
+  }
+
+  .hero-content h1 {
+    font-size: 4rem;
+    letter-spacing: 3px;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+    letter-spacing: 3px;
+  }
+
+  .quote-form-container {
+    width: 60%;
+  }
+}
+
+@media (max-width: 640px) {
+  .navbar-container {
+    flex-direction: row;
+    align-items: center;
+    padding: 16px 24px;
+  }
+
+  .Hamburger {
+    display: flex;
+  }
+
+  .navItems {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    position: absolute;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 20px 60px 20px 20px;
+    top: 80px;
+    right: 20px;
+    z-index: 10;
+    animation: navBounce ease-in-out 0.5s;
+  }
+
+  .hero-header {
+    margin-top: 80px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+  }
+
+  .hero-content p {
+    font-size: 0.6rem;
+    letter-spacing: 2px;
+  }
+
+  .navItems.open {
+    display: flex;
+  }
+
+  .quote-form-container {
+    width: 70%;
+    padding: 20px;
+  }
+
+  .quote-form-container h1 {
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-container {
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .Hamburger {
+    display: flex;
+  }
+
+  .navItems {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    position: absolute;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 20px 60px 20px 20px;
+    top: 80px;
+    right: 20px;
+    z-index: 100;
+    animation: navBounce ease-in-out 0.5s;
+  }
+
+   .navItems .navItem{
+    z-index: 1000;
+  }
+
+  .hero-content {
+    padding: 10px;
+    z-index: 10;
+  }
+
+  .hero-header {
+    margin-top: 80px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+    letter-spacing: 3px;
+  }
+
+  .hero-content p {
+    font-size: 0.5rem;
+    letter-spacing: 1.5px;
+  }
+
+  .QuoteBtn {
+    padding: 10px 50px;
+  }
+  .navItems.open {
+    display: flex;
+  }
+
+  .quote-form-container {
+    width: 70%;
+    padding: 20px;
+  }
+
+  .quote-form-container h1 {
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+  }
+}
+
+@keyframes formBounce {
+  0% {
+    bottom: 0%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, 0%);
+  }
+  100% {
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes navBounce {
+  0% {
+    top: 40px;
+    right: 20px;
+    opacity: 0;
+  }
+  100% {
+    top: 80px;
+    right: 20px;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,147 @@
+.reviews-page-container {
+  width: 100%;
+  height: auto;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("/img/big/reviews_bg.png") no-repeat center center/cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 30px;
+}
+
+.reviews-section {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  gap: 40px;
+}
+
+.reviews-section h2 {
+  font-weight: 400;
+}
+
+.reviews-section p {
+  font-weight: 400;
+  margin: 0;
+}
+
+.review-card {
+  width: 80%;
+  background-color: rgba(213, 175, 48, 0.3);
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.reviews-contact-form {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Contact-form-container {
+  width: 80%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  color: white;
+  border: 1.5px solid white;
+  border-radius: 10px;
+  gap: 30px;
+  position: relative;
+}
+
+.Contact-form-container h1 {
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.contact-form input {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: transparent;
+  color: white;
+  border: 1.5px solid white;
+  width: 100%;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.contact-form-btn-container{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .contact-form-btn-container button{
+    width: 50%;
+  }
+
+  .contact-form-btn-container button:hover{
+    border: 1px solid #D5AF30;
+    background-color: transparent;
+    color: #D5AF30;
+  }
+
+   .contact-form-btn-container button:active{
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+  }
+@media (max-width: 768px) {
+  .reviews-page-container {
+    flex-direction: column;
+    padding: 30px 20px;
+    gap: 40px;
+  }
+
+  .reviews-section,
+  .reviews-contact-form {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .reviews-page-container {
+    flex-direction: column;
+    padding: 30px 20px;
+    gap: 40px;
+  }
+
+  .reviews-section,
+  .reviews-contact-form {
+    width: 100%;
+    height: auto;
+  }
+
+  .reviews-section h2 {
+    font-size: 1.3rem;
+  }
+
+  .reviews-section p {
+    font-size: 0.7rem;
+  }
+}
