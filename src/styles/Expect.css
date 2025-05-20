@@ -9,7 +9,7 @@
   height: 100%;
   top: 0;
   left: 0;
-  background: url("img/big/expect_bg.png") center/cover no-repeat;
+  background: url("/img/big/expect-bg.png") center/cover no-repeat;
   opacity: 0.5;
 }
 
