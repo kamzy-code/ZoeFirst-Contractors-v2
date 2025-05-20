@@ -25,7 +25,7 @@ function HomePage() {
   return (
     <div className="hero" id="home">
       <div className="hero-backdrop-clicker" onClick={()=>setIsNavOpen(false)}></div>
-      <NavBar isNavOpen={isNavOpen} toggleNavMenu={toggleNavMenu} containerClasssName="navbar-container" navItemsClassName="navItems" hamburgerClassName="Hamburger" logoSrc="/img/logo.png"/>
+      <NavBar isNavOpen={isNavOpen} toggleNavMenu={toggleNavMenu} containerClasssName="navbar-container" navItemsClassName="navItems" hamburgerClassName="Hamburger" logoSrc="/img/logo_gold.png"/>
 
       <div className="hero-content" onClick={()=>setIsNavOpen(false)}>
         <div className="hero-header">
