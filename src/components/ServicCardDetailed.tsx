@@ -29,7 +29,7 @@ function ServiceCardModal({
         <div className="service-card-detailed-content-text">
           <h2>{title}</h2>
           <p>{description}</p>
-          <h2>Sevices Includes:</h2>
+          <h2>Services Includes:</h2>
           <ul>
             {services &&
               services.map((service, index) => <li key={index}>{service}</li>)}
